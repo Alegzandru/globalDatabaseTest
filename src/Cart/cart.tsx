@@ -1,7 +1,7 @@
 import { CartContext } from "Cart.context"
 import React, { useContext } from "react"
 import { RenderCart } from "utils"
-import styles from './cart.module.css'
+import styles from '../List/list.module.css'
 
 const Cart = () => {
   const {state} = useContext(CartContext)
@@ -9,7 +9,7 @@ const Cart = () => {
   return(
   <div>
     <h2>
-        Your cart:
+        Cart:
       </h2>
       <table className={styles.table}>
         <thead>

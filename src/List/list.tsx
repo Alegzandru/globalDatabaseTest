@@ -22,17 +22,22 @@ const List = () => {
 
   return (
     <div>
+      <h2>Products:</h2>
       <table className={styles.table}>
         <thead>
           <tr>
             <th className={styles.flex} onClick={() => {setSorting(sorting === 'catAsc' ? 'catDesc' : 'catAsc')}}>
               <div>Category</div> 
-              <div className={styles.arrow}>V</div>
+              <div className={styles.arrow} style={{
+                transform: sorting === 'catAsc' ? 'rotate(360deg)' : 'rotate(180deg)'
+              }}>V</div>
             </th>
             <th>Name</th>
             <th className={styles.flex} onClick={() => {setSorting(sorting === 'priceAsc' ? 'priceDesc' : 'priceAsc')}}>
               <div>Price</div> 
-              <div className={styles.arrow}>V</div>
+              <div className={styles.arrow} style={{
+                transform: sorting === 'priceDesc' ? 'rotate(360deg)' : 'rotate(180deg)'
+              }}>V</div>
             </th>
             <th>Actions</th>
           </tr>
